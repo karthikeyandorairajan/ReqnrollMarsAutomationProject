@@ -3,7 +3,6 @@ using AventStack.ExtentReports.Reporter;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using Reqnroll.BoDi;
-using Reqnroll;
 using ReqnrollMarsAutomationProject.Config;
 using ReqnrollMarsAutomationProject.Pages;
 using System.Text.Json;
@@ -70,6 +69,8 @@ namespace ReqnrollMarsAutomationProject.Hooks
             _objectContainer.RegisterInstanceAs(new NavigationHelper(driver));
             _objectContainer.RegisterInstanceAs(new HomePage(driver));
             _objectContainer.RegisterInstanceAs(new ProfilePage(driver));
+            _objectContainer.RegisterInstanceAs(new LanguagePage(driver));
+            _objectContainer.RegisterInstanceAs(new SkillsPage(driver));
 
             lock (_reportLock)
             {

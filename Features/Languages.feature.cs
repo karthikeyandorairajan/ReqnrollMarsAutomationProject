@@ -18,18 +18,18 @@ namespace ReqnrollMarsAutomationProject.Features
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Reqnroll", "2.0.0.0")]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("LanguagesAndSkills")]
+    [NUnit.Framework.DescriptionAttribute("Languages")]
     [NUnit.Framework.FixtureLifeCycleAttribute(NUnit.Framework.LifeCycle.InstancePerTestCase)]
-    public partial class LanguagesAndSkillsFeature
+    public partial class LanguagesFeature
     {
         
         private global::Reqnroll.ITestRunner testRunner;
         
         private static string[] featureTags = ((string[])(null));
         
-        private static global::Reqnroll.FeatureInfo featureInfo = new global::Reqnroll.FeatureInfo(new global::System.Globalization.CultureInfo("en-US"), "Features", "LanguagesAndSkills", "As a user, I want to Add and Verify Languages and Skills", global::Reqnroll.ProgrammingLanguage.CSharp, featureTags);
+        private static global::Reqnroll.FeatureInfo featureInfo = new global::Reqnroll.FeatureInfo(new global::System.Globalization.CultureInfo("en-US"), "Features", "Languages", "As a user, I want to Add and Verify Languages ", global::Reqnroll.ProgrammingLanguage.CSharp, featureTags);
         
-#line 1 "LanguagesAndSkills.feature"
+#line 1 "Languages.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
@@ -141,9 +141,12 @@ this.ScenarioInitialize(scenarioInfo);
  await testRunner.ThenAsync("I should see the Profile page", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
 #line 10
- await testRunner.AndAsync(string.Format("Enter {0} and {1}", language, level), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+ await testRunner.ThenAsync("Clear the data", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
 #line 11
+ await testRunner.AndAsync(string.Format("Enter {0} and {1}", language, level), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 12
  await testRunner.ThenAsync(string.Format("Find added {0} and {1}", language, level), ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
             }
@@ -167,7 +170,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("language", language);
             argumentsOfScenario.Add("level", level);
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Add and verify duplicate languages and levels", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 21
+#line 22
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -177,22 +180,25 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 22
+#line 23
  await testRunner.GivenAsync("I am on the Sign in page", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 23
+#line 24
  await testRunner.WhenAsync("I enter valid credentials", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 24
+#line 25
  await testRunner.ThenAsync("I should see the Profile page", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 25
- await testRunner.AndAsync(string.Format("Enter {0} and {1}", language, level), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
-#line hidden
 #line 26
- await testRunner.AndAsync(string.Format("Same {0} and {1} again", language, level), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+ await testRunner.ThenAsync("Clear the data", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
 #line 27
+ await testRunner.AndAsync(string.Format("Enter {0} and {1}", language, level), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 28
+ await testRunner.AndAsync(string.Format("Same {0} and {1} again", language, level), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 29
  await testRunner.AndAsync("Verify that duplicate language and level is not added", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -217,7 +223,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("level", level);
             argumentsOfScenario.Add("differentlevel", differentlevel);
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Add and verify duplicate languages", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 35
+#line 37
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -227,22 +233,25 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 36
+#line 38
  await testRunner.GivenAsync("I am on the Sign in page", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 37
+#line 39
  await testRunner.WhenAsync("I enter valid credentials", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 38
+#line 40
  await testRunner.ThenAsync("I should see the Profile page", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 39
+#line 41
+ await testRunner.ThenAsync("Clear the data", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+#line hidden
+#line 42
  await testRunner.AndAsync(string.Format("Enter {0} and {1}", language, level), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 40
+#line 43
  await testRunner.AndAsync(string.Format("Same {0} and {1} again", language, differentlevel), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 41
+#line 44
  await testRunner.AndAsync("Verify that duplicate language is not added", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -266,7 +275,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("language", language);
             argumentsOfScenario.Add("level", level);
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Add and verify empty languages and levels", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 49
+#line 52
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -276,19 +285,22 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 50
+#line 53
  await testRunner.GivenAsync("I am on the Sign in page", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 51
+#line 54
  await testRunner.WhenAsync("I enter valid credentials", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 52
+#line 55
  await testRunner.ThenAsync("I should see the Profile page", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 53
+#line 56
+ await testRunner.ThenAsync("Clear the data", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+#line hidden
+#line 57
  await testRunner.AndAsync(string.Format("Enter {0} and {1}", language, level), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 54
+#line 58
  await testRunner.AndAsync("Verify that popup appears for empty language and level", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -312,7 +324,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("language", language);
             argumentsOfScenario.Add("level", level);
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Delete and verify languages and levels", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 61
+#line 65
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -322,22 +334,25 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 62
+#line 66
  await testRunner.GivenAsync("I am on the Sign in page", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 63
+#line 67
  await testRunner.WhenAsync("I enter valid credentials", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 64
+#line 68
  await testRunner.ThenAsync("I should see the Profile page", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 65
+#line 69
+ await testRunner.ThenAsync("Clear the data", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+#line hidden
+#line 70
  await testRunner.AndAsync(string.Format("Enter {0} and {1}", language, level), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 66
+#line 71
  await testRunner.AndAsync(string.Format("Delete {0} and {1}", language, level), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 67
+#line 72
  await testRunner.AndAsync(string.Format("Verify that {0} and level is deleted", language), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -363,7 +378,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("updatedlanguage", updatedlanguage);
             argumentsOfScenario.Add("updatedlevel", updatedlevel);
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Edit and verify languages and levels", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 74
+#line 79
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -373,22 +388,25 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 75
+#line 80
  await testRunner.GivenAsync("I am on the Sign in page", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 76
+#line 81
  await testRunner.WhenAsync("I enter valid credentials", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 77
+#line 82
  await testRunner.ThenAsync("I should see the Profile page", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 78
+#line 83
+ await testRunner.ThenAsync("Clear the data", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+#line hidden
+#line 84
  await testRunner.AndAsync(string.Format("Enter {0} and {1}", language, level), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 79
+#line 85
  await testRunner.AndAsync(string.Format("Edit {0} and {1} to {2} and {3}", language, level, updatedlanguage, updatedlevel), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 80
+#line 86
  await testRunner.AndAsync(string.Format("Verify that {0} and {1} is updated", updatedlanguage, updatedlevel), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -411,7 +429,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("language4", language4);
             argumentsOfScenario.Add("level4", level4);
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Test add and verify maximum languages", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 88
+#line 94
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -421,355 +439,32 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 89
- await testRunner.GivenAsync("I am on the Sign in page", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
-#line hidden
-#line 90
- await testRunner.WhenAsync("I enter valid credentials", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
-#line hidden
-#line 91
- await testRunner.ThenAsync("I should see the Profile page", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
-#line hidden
-#line 92
- await testRunner.AndAsync(string.Format("Enter {0} and {1}", language1, level1), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
-#line hidden
-#line 93
- await testRunner.AndAsync(string.Format("Enter {0} and {1}", language2, level2), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
-#line hidden
-#line 94
- await testRunner.AndAsync(string.Format("Enter {0} and {1}", language3, level3), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
-#line hidden
 #line 95
- await testRunner.AndAsync(string.Format("Enter {0} and {1}", language4, level4), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+ await testRunner.GivenAsync("I am on the Sign in page", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
 #line 96
- await testRunner.ThenAsync("Verify AddNewbutton is not available", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+ await testRunner.WhenAsync("I enter valid credentials", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-            }
-            await this.ScenarioCleanupAsync();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Add and verify skills")]
-        [NUnit.Framework.CategoryAttribute("regression")]
-        public async global::System.Threading.Tasks.Task AddAndVerifySkills()
-        {
-            string[] tagsOfScenario = new string[] {
-                    "regression"};
-            global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
-            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Add and verify skills", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 97
+ await testRunner.ThenAsync("I should see the Profile page", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+#line hidden
+#line 98
+ await testRunner.ThenAsync("Clear the data", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+#line hidden
+#line 99
+ await testRunner.AndAsync(string.Format("Enter {0} and {1}", language1, level1), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 100
+ await testRunner.AndAsync(string.Format("Enter {0} and {1}", language2, level2), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 101
+ await testRunner.AndAsync(string.Format("Enter {0} and {1}", language3, level3), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 102
+ await testRunner.AndAsync(string.Format("Enter {0} and {1}", language4, level4), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
 #line 103
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                await this.ScenarioStartAsync();
-#line 104
- await testRunner.GivenAsync("I am on the Sign in page", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
-#line hidden
-#line 105
- await testRunner.WhenAsync("I enter valid credentials", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
-#line hidden
-#line 106
- await testRunner.ThenAsync("I should see the Profile page", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
-#line hidden
-#line 107
- await testRunner.AndAsync("Add Skills", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
-#line hidden
-#line 108
- await testRunner.ThenAsync("Verify added Skills", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
-#line hidden
-            }
-            await this.ScenarioCleanupAsync();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Test add and verify multiple skills")]
-        [NUnit.Framework.TestCaseAttribute("Dance", "Beginner", null)]
-        [NUnit.Framework.TestCaseAttribute("@#45Re1", "Intermediate", null)]
-        [NUnit.Framework.TestCaseAttribute("silambam", "Intermediate", null)]
-        [NUnit.Framework.TestCaseAttribute("karate", "Expert", null)]
-        [NUnit.Framework.TestCaseAttribute("song", "Beginner", null)]
-        public async global::System.Threading.Tasks.Task TestAddAndVerifyMultipleSkills(string skill, string level, string[] exampleTags)
-        {
-            string[] tagsOfScenario = exampleTags;
-            global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("skill", skill);
-            argumentsOfScenario.Add("level", level);
-            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Test add and verify multiple skills", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 111
- this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                await this.ScenarioStartAsync();
-#line 112
- await testRunner.GivenAsync("I am on the Sign in page", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
-#line hidden
-#line 113
- await testRunner.WhenAsync("I enter valid credentials", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
-#line hidden
-#line 114
- await testRunner.ThenAsync("I should see the Profile page", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
-#line hidden
-#line 115
- await testRunner.AndAsync(string.Format("Add {0} and {1}", skill, level), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
-#line hidden
-#line 116
- await testRunner.ThenAsync(string.Format("Findskill added {0} and {1}", skill, level), ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
-#line hidden
-            }
-            await this.ScenarioCleanupAsync();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Add and verify duplicate skills and levels")]
-        [NUnit.Framework.CategoryAttribute("regression")]
-        [NUnit.Framework.TestCaseAttribute("Dance", "Beginner", null)]
-        public async global::System.Threading.Tasks.Task AddAndVerifyDuplicateSkillsAndLevels(string skill, string level, string[] exampleTags)
-        {
-            string[] @__tags = new string[] {
-                    "regression"};
-            if ((exampleTags != null))
-            {
-                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
-            }
-            string[] tagsOfScenario = @__tags;
-            global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("skill", skill);
-            argumentsOfScenario.Add("level", level);
-            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Add and verify duplicate skills and levels", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 127
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                await this.ScenarioStartAsync();
-#line 128
- await testRunner.GivenAsync("I am on the Sign in page", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
-#line hidden
-#line 129
- await testRunner.WhenAsync("I enter valid credentials", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
-#line hidden
-#line 130
- await testRunner.ThenAsync("I should see the Profile page", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
-#line hidden
-#line 131
- await testRunner.AndAsync(string.Format("Add {0} and {1}", skill, level), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
-#line hidden
-#line 132
- await testRunner.AndAsync(string.Format("Addsame {0} and {1} again", skill, level), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
-#line hidden
-#line 133
- await testRunner.AndAsync("Verify that duplicate skill and level is not added", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
-#line hidden
-            }
-            await this.ScenarioCleanupAsync();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Add and verify duplicate skills")]
-        [NUnit.Framework.CategoryAttribute("regression")]
-        [NUnit.Framework.TestCaseAttribute("silambam", "Expert", "Beginner", null)]
-        public async global::System.Threading.Tasks.Task AddAndVerifyDuplicateSkills(string skill, string level, string differentlevel, string[] exampleTags)
-        {
-            string[] @__tags = new string[] {
-                    "regression"};
-            if ((exampleTags != null))
-            {
-                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
-            }
-            string[] tagsOfScenario = @__tags;
-            global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("skill", skill);
-            argumentsOfScenario.Add("level", level);
-            argumentsOfScenario.Add("differentlevel", differentlevel);
-            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Add and verify duplicate skills", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 140
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                await this.ScenarioStartAsync();
-#line 141
- await testRunner.GivenAsync("I am on the Sign in page", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
-#line hidden
-#line 142
- await testRunner.WhenAsync("I enter valid credentials", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
-#line hidden
-#line 143
- await testRunner.ThenAsync("I should see the Profile page", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
-#line hidden
-#line 144
- await testRunner.AndAsync(string.Format("Add {0} and {1}", skill, level), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
-#line hidden
-#line 145
- await testRunner.AndAsync(string.Format("Addsame {0} and {1} again", skill, differentlevel), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
-#line hidden
-#line 146
- await testRunner.AndAsync("Verify that duplicate skill is not added", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
-#line hidden
-            }
-            await this.ScenarioCleanupAsync();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Add and verify empty skill and levels")]
-        [NUnit.Framework.CategoryAttribute("regression")]
-        [NUnit.Framework.TestCaseAttribute("", "", null)]
-        public async global::System.Threading.Tasks.Task AddAndVerifyEmptySkillAndLevels(string skill, string level, string[] exampleTags)
-        {
-            string[] @__tags = new string[] {
-                    "regression"};
-            if ((exampleTags != null))
-            {
-                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
-            }
-            string[] tagsOfScenario = @__tags;
-            global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("skill", skill);
-            argumentsOfScenario.Add("level", level);
-            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Add and verify empty skill and levels", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 155
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                await this.ScenarioStartAsync();
-#line 156
- await testRunner.GivenAsync("I am on the Sign in page", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
-#line hidden
-#line 157
- await testRunner.WhenAsync("I enter valid credentials", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
-#line hidden
-#line 158
- await testRunner.ThenAsync("I should see the Profile page", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
-#line hidden
-#line 159
- await testRunner.AndAsync(string.Format("Add {0} and {1}", skill, level), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
-#line hidden
-#line 160
- await testRunner.AndAsync("Verify that popup appears for empty skill and level", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
-#line hidden
-            }
-            await this.ScenarioCleanupAsync();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Delete and verify Skill and levels")]
-        [NUnit.Framework.CategoryAttribute("regression")]
-        [NUnit.Framework.TestCaseAttribute("silambam", "Expert", null)]
-        public async global::System.Threading.Tasks.Task DeleteAndVerifySkillAndLevels(string skill, string level, string[] exampleTags)
-        {
-            string[] @__tags = new string[] {
-                    "regression"};
-            if ((exampleTags != null))
-            {
-                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
-            }
-            string[] tagsOfScenario = @__tags;
-            global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("skill", skill);
-            argumentsOfScenario.Add("level", level);
-            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Delete and verify Skill and levels", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 168
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                await this.ScenarioStartAsync();
-#line 169
- await testRunner.GivenAsync("I am on the Sign in page", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
-#line hidden
-#line 170
- await testRunner.WhenAsync("I enter valid credentials", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
-#line hidden
-#line 171
- await testRunner.ThenAsync("I should see the Profile page", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
-#line hidden
-#line 172
- await testRunner.AndAsync(string.Format("Add {0} and {1}", skill, level), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
-#line hidden
-#line 173
- await testRunner.AndAsync(string.Format("Deleteadd {0} and {1}", skill, level), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
-#line hidden
-#line 174
- await testRunner.AndAsync(string.Format("Verify Addskill that {0} and level is deleted", skill), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
-#line hidden
-            }
-            await this.ScenarioCleanupAsync();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Edit and verify skill and levels")]
-        [NUnit.Framework.CategoryAttribute("regression")]
-        [NUnit.Framework.TestCaseAttribute("karate", "Beginner", "silambam", "Expert", null)]
-        public async global::System.Threading.Tasks.Task EditAndVerifySkillAndLevels(string skill, string level, string updatedskill, string updatedlevel, string[] exampleTags)
-        {
-            string[] @__tags = new string[] {
-                    "regression"};
-            if ((exampleTags != null))
-            {
-                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
-            }
-            string[] tagsOfScenario = @__tags;
-            global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("skill", skill);
-            argumentsOfScenario.Add("level", level);
-            argumentsOfScenario.Add("updatedskill", updatedskill);
-            argumentsOfScenario.Add("updatedlevel", updatedlevel);
-            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Edit and verify skill and levels", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 181
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                await this.ScenarioStartAsync();
-#line 182
- await testRunner.GivenAsync("I am on the Sign in page", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
-#line hidden
-#line 183
- await testRunner.WhenAsync("I enter valid credentials", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
-#line hidden
-#line 184
- await testRunner.ThenAsync("I should see the Profile page", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
-#line hidden
-#line 185
- await testRunner.AndAsync(string.Format("Add {0} and {1}", skill, level), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
-#line hidden
-#line 186
- await testRunner.AndAsync(string.Format("Editskill {0} and {1} to {2} and {3}", skill, level, updatedskill, updatedlevel), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
-#line hidden
-#line 187
- await testRunner.AndAsync(string.Format("Verify skill that {0} and {1} is updated", updatedskill, updatedlevel), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+ await testRunner.ThenAsync("Verify AddNewbutton is not available", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
             }
             await this.ScenarioCleanupAsync();
